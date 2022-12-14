@@ -12,6 +12,7 @@
 		E2098A562949006F004139E8 /* AccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2098A552949006F004139E8 /* AccessViewController.swift */; };
 		E2098A5B29490070004139E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2098A5A29490070004139E8 /* Assets.xcassets */; };
 		E2098A5E29490070004139E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2098A5C29490070004139E8 /* LaunchScreen.storyboard */; };
+		E2F28497294A51E500969BA0 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F28496294A51E500969BA0 /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		E2098A5A29490070004139E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2098A5D29490070004139E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2098A5F29490070004139E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2F28496294A51E500969BA0 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				E2098A512949006F004139E8 /* AppDelegate.swift */,
 				E2098A532949006F004139E8 /* SceneDelegate.swift */,
 				E2098A552949006F004139E8 /* AccessViewController.swift */,
+				E2F28496294A51E500969BA0 /* CustomButton.swift */,
 				E2098A5A29490070004139E8 /* Assets.xcassets */,
 				E2098A5C29490070004139E8 /* LaunchScreen.storyboard */,
 				E2098A5F29490070004139E8 /* Info.plist */,
@@ -134,6 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2F28497294A51E500969BA0 /* CustomButton.swift in Sources */,
 				E2098A562949006F004139E8 /* AccessViewController.swift in Sources */,
 				E2098A522949006F004139E8 /* AppDelegate.swift in Sources */,
 				E2098A542949006F004139E8 /* SceneDelegate.swift in Sources */,

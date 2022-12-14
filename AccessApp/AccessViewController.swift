@@ -14,6 +14,19 @@ final class AccessViewController: UIViewController {
     private let morpheusImage = UIImageView()
     private let quotelabel = UILabel()
     
+    private let redPillButton = CustomButton(title: "Красная таблетка",
+                                             backgroundColor: .systemRed,
+                                             isShadow: true)
+    private let bluePillButton = CustomButton(title: "Синяя таблетка",
+                                              backgroundColor: .systemBlue,
+                                              isShadow: true)
+    private let callingAgentButton = CustomButton(title: "Вызвать агента Смита",
+                                                  backgroundColor: .systemMint,
+                                                  isShadow: false,
+                                                  titleColor: .black)
+    
+    private let buttonContainer = UIStackView()
+    
     //MARK: Override method
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +42,7 @@ private extension AccessViewController {
         
         setupMorpheusImage()
         setupQuoteLabel()
+        setupbuttonContainer()
         
         setupLayout()
     }
@@ -37,7 +51,7 @@ private extension AccessViewController {
 //MARK: - Setting
 private extension AccessViewController {
     func addSubViews() {
-        [morpheusImage, quotelabel].forEach { subView in
+        [morpheusImage, quotelabel, buttonContainer, callingAgentButton].forEach { subView in
             view.addSubview(subView)
         }
     }
@@ -53,12 +67,23 @@ private extension AccessViewController {
         quotelabel.numberOfLines = 0
         quotelabel.textAlignment = .center
     }
+    
+    func setupbuttonContainer() {
+        buttonContainer.axis = .horizontal
+        buttonContainer.spacing = 20
+        
+        buttonContainer.addArrangedSubview(redPillButton)
+        buttonContainer.addArrangedSubview(bluePillButton)
+    }
+    
 }
 
 //MARK: - Layout
 private extension AccessViewController {
     func setupLayout() {
-        [morpheusImage, quotelabel].forEach { view in
+        [morpheusImage, quotelabel,
+         redPillButton, bluePillButton,
+         callingAgentButton, buttonContainer].forEach { view in
             view.translatesAutoresizingMaskIntoConstraints = false
         }
         
@@ -71,7 +96,17 @@ private extension AccessViewController {
             quotelabel.topAnchor.constraint(equalTo: morpheusImage.bottomAnchor, constant: 10),
             quotelabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             quotelabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
-            quotelabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50)
+            quotelabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
+            
+            buttonContainer.topAnchor.constraint(equalTo: morpheusImage.bottomAnchor, constant: 150),
+            buttonContainer.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            buttonContainer.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            buttonContainer.heightAnchor.constraint(equalToConstant: 50),
+        
+            
+            callingAgentButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 100),
+            callingAgentButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+          
         ])
     }
 }
