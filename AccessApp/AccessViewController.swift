@@ -71,9 +71,14 @@ private extension AccessViewController {
     func setupbuttonContainer() {
         buttonContainer.axis = .horizontal
         buttonContainer.spacing = 20
+        buttonContainer.distribution = .fillEqually
         
         buttonContainer.addArrangedSubview(redPillButton)
         buttonContainer.addArrangedSubview(bluePillButton)
+    }
+    
+    func setupCallingAgent() {
+        
     }
     
 }
@@ -104,9 +109,10 @@ private extension AccessViewController {
             buttonContainer.heightAnchor.constraint(equalToConstant: 50),
         
             
-            callingAgentButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 100),
-            callingAgentButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-          
+            callingAgentButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100),
+            callingAgentButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            callingAgentButton.heightAnchor.constraint(equalToConstant: 50),
+            callingAgentButton.widthAnchor.constraint(equalToConstant: 180)
         ])
     }
 }
